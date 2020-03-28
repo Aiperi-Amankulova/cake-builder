@@ -12,7 +12,7 @@ export default ( {children} ) => {
       <Layout>
          Drawer
       </Layout>
-        
+        {children}
     </div>
   );
 }

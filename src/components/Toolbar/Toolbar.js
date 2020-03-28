@@ -1,10 +1,11 @@
 import React from 'react';
+import toolbarCss from './Toolbar.module.css';
 
 export default () => {
     return (
-      <div className="Toolbar"> 
-      Toolbar
+      <div className= {toolbarCss.Toolbar}> 
       
+      Toolbar
       </div>
     );
   }
