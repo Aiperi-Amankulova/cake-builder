@@ -1,12 +1,18 @@
 import React from 'react'; 
-import './App.css';
-
-function App() {
+import './App.css'; 
+import Layout from './components/Layout/Layout';
+ 
+  
+export default ( {children} ) => {
   return (
     <div className="App">
-       Cake Builder by Aiperi Amankulova
+      <Layout>
+        Cake Builder
+      </Layout>
+      <Layout>
+         Drawer
+      </Layout>
+        
     </div>
   );
 }
-
-export default App;
