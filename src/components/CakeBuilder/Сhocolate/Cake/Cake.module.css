@@ -1,15 +1,38 @@
 .Cake{
     background-color: #e89c49; 
     width: 150px;
-    height:20px; 
-    margin-left: 5px;
-    margin-top: 2px;
-    border-radius: 4px;
-
-    display: flex;
-    flex-flow:  column;
-
-    overflow: hidden;
+    height:20px;   
+    border-radius: 4px;  
 }
+.chocolateCream{
+   /* шоколадный крем */
+    background-color: rgb(133, 35, 35); 
+    width: 150px;
+    height: 10px;
+    border-radius: 2px;
+}
+.fruitCream{
+   /* фруктовый крем */
+    background-color: rgb(226, 101, 159); 
+    width: 150px;
+    height: 10px;
+    border-radius: 2px;
+}
+.curdCream{
+   /* творожный крем */
+    background-color: #e1c6a8; 
+    width: 150px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.proteinCream{
+   /* белковый крем  */
+    background-color: white; 
+    width: 150px;
+    height: 10px;
+    border-radius: 2px;
+}
+
 
  
