@@ -1,18 +1,17 @@
 import React from 'react'; 
 import './App.css'; 
 import Layout from './components/Layout/Layout';
+import CakeBuilder from './containers/CakeBuilder/CakeBuilder';
+ 
  
   
-export default ( {children} ) => {
+export default () => {
   return (
-    <div className="App">
+    <div className= "App">
       <Layout>
-        Cake Builder
+         <CakeBuilder/>
       </Layout>
-      <Layout>
-         Drawer
-      </Layout>
-        {children}
+    
     </div>
   );
 }

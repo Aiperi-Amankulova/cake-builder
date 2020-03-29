@@ -1,11 +1,13 @@
 import React from 'react';
-import toolbarCss from './Toolbar.module.css';
+import classes from './Toolbar.module.css';
+import Logo from '../Layout/Logo/Logo';
+import Nav from './Nav/Nav';
 
 export default () => {
     return (
-      <div className= {toolbarCss.Toolbar}> 
-      
-      Toolbar
+      <div className= { classes.Toolbar}> 
+       <Logo/>
+       <Nav/>
       </div>
     );
   }
