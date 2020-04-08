@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
 import Chocolate from  '../../components/CakeBuilder/Сhocolate/Сhocolate';
 import classes from './CakeBuilder.module.css';
+import CakeControls from '../../components/CakeBuilder/CakeControls/CakeControls';
 
 export default () => {
 const [ingredients, setIngredients] = useState({
@@ -13,7 +14,7 @@ const [ingredients, setIngredients] = useState({
     return (
       <div className= { classes.CakeBuilder }> 
       <Chocolate ingredients={ingredients}/>
-      CakeControls
+       <CakeControls/>
       </div>
     );
   }

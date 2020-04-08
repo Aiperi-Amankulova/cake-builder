@@ -2,13 +2,13 @@
     border: 3px solid gray;
     background-color: rgb(236, 191, 214);
     width: 400px;
-    height: 500px;
-    margin-left: 20px;
+    height: 450px; 
     padding-top: 20px;
 
     display: flex; 
     flex-flow: column wrap; 
     align-items: center;
+    justify-content: center;
  
     overflow: hidden;
 }
