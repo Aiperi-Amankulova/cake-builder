@@ -5,21 +5,25 @@ export default ({ type }) => {
      const cakeClasses = [classes.Cake]
 
     switch(type){ 
-     case 'chocolate-cream':
+     case 'chocolateCream':
          cakeClasses.push(classes.chocolateCream);
          break;
 
-     case 'fruit-cream':
+     case 'fruitCream':
         cakeClasses.push(classes.fruitCream);
          break;
 
-     case 'curd-cream':
+     case 'curdCream':
         cakeClasses.push(classes.curdCream);
          break; 
 
-     case 'protein-cream':
+     case 'proteinCream':
         cakeClasses.push(classes.proteinCream); 
          break;   
+    
+    case 'plate':
+        cakeClasses.push(classes.plate);
+         break;
     }
     return (
       <div className= {cakeClasses.join(" ")}>   

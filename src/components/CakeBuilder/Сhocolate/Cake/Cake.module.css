@@ -33,6 +33,12 @@
     height: 10px;
     border-radius: 2px;
 }
-
+.plate{
+    /* тарелка */
+    background-color: black; 
+    width: 200px;
+    height: 25px;
+    border-radius: 30px;
+}
 
  

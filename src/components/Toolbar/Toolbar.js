@@ -5,7 +5,7 @@ import Nav from './Nav/Nav';
 
 export default () => {
     return (
-      <div className= { classes.Toolbar}> 
+      <div className= { classes.Toolbar }> 
        <Logo/>
        <Nav/>
       </div>
