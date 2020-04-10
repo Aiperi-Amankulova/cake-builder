@@ -5,6 +5,7 @@ import CakeControl from './CakeControl/CakeControl';
 export default () => {
     const controls = [
         {label: "Chocolate Cream", type: "chocolateCream"},
+        {label: "Cake", type: "cake"},
         {label: "Fruit Cream", type: "fruitCream"},
         {label: "Curd Cream", type: "curdCream"},
         {label: "Protein Cream", type: "proteinCream"}

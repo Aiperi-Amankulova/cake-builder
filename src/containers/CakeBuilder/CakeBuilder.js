@@ -6,6 +6,7 @@ import CakeControls from '../../components/CakeBuilder/CakeControls/CakeControls
 export default () => {
 const [ingredients, setIngredients] = useState({
   chocolateCream:1,
+  cake:1,
   fruitCream: 1, 
   curdCream: 1, 
   proteinCream:1
