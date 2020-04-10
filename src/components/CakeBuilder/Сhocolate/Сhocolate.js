@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Chocolate.module.css';
 import Cake from './Cake/Cake';
 
-export default ({ ingredients }) => {
+export default ({ ingredients,price }) => {
   let ingredientsOutput = [];
 
   const types = Object.keys(ingredients);
@@ -13,13 +13,15 @@ export default ({ ingredients }) => {
   });
     return (
       <div className= { classes.Chocolate }> 
-            <Cake/>
-             {ingredientsOutput}
-             <Cake/>
-            <Cake type="plate"/>
-           
-
+       
+       <div className={classes.bento}> 
+         {ingredientsOutput}
+         <Cake type="plate"/> 
       </div>
+      <div className={classes.price}> 
+       Total price: {price}
+      </div>
+     </div>
     );
   }
 

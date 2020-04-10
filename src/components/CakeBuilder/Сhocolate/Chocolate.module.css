@@ -1,4 +1,4 @@
-.Chocolate{
+.Chocolate .bento{
     border: 3px solid gray;
     background-color: rgb(236, 191, 214);
     width: 400px;
@@ -11,4 +11,9 @@
     justify-content: center;
  
     overflow: hidden;
+}
+.Chocolate .price{
+    font-size: 2rem;
+    font-family: sans-serif;
+    align-items: center;
 }
