@@ -43,6 +43,7 @@ if(ingredients[type] >= 1){
       <div className= { classes.CakeBuilder }> 
       <Chocolate price={price} ingredients={ingredients}/>
        <CakeControls
+       ingredients={ingredients}
        addIngredient={addIngredient}
        removeIngredient={removeIngredient}/>
       </div>
