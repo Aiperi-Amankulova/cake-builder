@@ -2,11 +2,12 @@
     border: 3px solid rgb(211, 205, 205);
     background-color: rgb(191, 223, 236);
     width: 400px;
-    height: 450px;
-    border-radius: 30px; 
-    padding-top: 20px;
+    height: 300px;
+    border-radius: 30px;  
+    margin-top: 70px;
 
     display: flex;   
     flex-flow: column nowrap; 
     align-items: center;
+    justify-content: center;
 }

@@ -1,37 +1,29 @@
-.Cake{
-    background-color: #e89c49; 
-    width: 150px;
-    height:20px;   
-    border-radius: 4px;  
-}
-.chocolateCream{
-   /* шоколадный крем */
-    background-color: rgb(133, 35, 35); 
-    width: 150px;
-    height: 10px;
-    border-radius: 2px;
-}
-.fruitCream{
-   /* фруктовый крем */
-    background-color: rgb(226, 101, 159); 
-    width: 150px;
-    height: 10px;
-    border-radius: 2px;
-}
-.curdCream{
-   /* творожный крем */
-    background-color: #e1c6a8; 
-    width: 150px;
-    height: 10px;
-    border-radius: 2px;
+.Cake{ 
+    box-sizing: border-box;
+    
+    background-repeat: no-repeat;
+     background-size: contain;
+     width: 500px;
+     height: 50px;
 }
 
+.chocolateCream{ 
+    background-image: url(../../../../assets/cake.svg); 
+}
+.strawberryCream{ 
+   background-image: url(../../../../assets/cake.svg); 
+}
+.curdCream{ 
+   background-image: url(../../../../assets/cake.svg); 
+}
 .proteinCream{
-   /* белковый крем  */
-    background-color: white; 
-    width: 150px;
-    height: 10px;
-    border-radius: 2px;
+    background-image: url(../../../../assets/cake.svg); 
+}
+.bananaCream{
+    background-image: url(../../../../assets/cake.svg); 
+}
+.bananaCream{
+    background-image: url(../../../../assets/cake.svg); 
 }
 .plate{
     /* тарелка */
@@ -40,5 +32,3 @@
     height: 25px;
     border-radius: 30px;
 }
-
- 

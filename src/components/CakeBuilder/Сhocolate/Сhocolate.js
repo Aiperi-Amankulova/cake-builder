@@ -17,7 +17,6 @@ export default ({ ingredients,price }) => {
        
        <div className={classes.bento}> 
          {ingredientsOutput}
-         <Cake/>
          <Cake type="plate"/>
 
       </div>

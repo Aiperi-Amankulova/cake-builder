@@ -1,6 +1,7 @@
 import React  from 'react'; 
 import classes from './CakeControls.module.css';
 import CakeControl from './CakeControl/CakeControl';
+
  const CONTROLS = [
         {label: "Chocolate Cream", type: "chocolateCream"}, 
         {label: "Сtrawberry Сream", type: "strawberryCream"},
@@ -14,6 +15,7 @@ export default ( {addIngredient,removeIngredient, ingredients} ) => {
  
     const controlsOutput = CONTROLS.map((control) => ( 
     <CakeControl 
+         key={control.type}
          control={control}
          addIngredient={addIngredient}
          removeIngredient={removeIngredient}

@@ -14,6 +14,8 @@
 }
 .Chocolate .price{
     font-size: 2rem;
-    font-family: sans-serif;
-    align-items: center;
+    font-family: 'Julius Sans One', sans-serif;
+    margin-top: 5px;
+    display: flex; 
+    justify-content: center;
 }

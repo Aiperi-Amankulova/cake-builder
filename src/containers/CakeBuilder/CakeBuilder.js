@@ -4,18 +4,23 @@ import classes from './CakeBuilder.module.css';
 import CakeControls from '../../components/CakeBuilder/CakeControls/CakeControls';
 
 const PRICES ={
-  chocolateCream: 50, 
-  fruitCream: 50, 
-  curdCream: 50, 
-  proteinCream:50
+  chocolateCream: 40, 
+  strawberryCream: 45,
+  curdCream:45,
+  proteinCream:50,
+  bananaCream:50,
+  vanillaCream:55
 }
 
 export default () => {
 const [ingredients, setIngredients] = useState({
-  chocolateCream:0, 
-  fruitCream: 0, 
-  curdCream: 0, 
-  proteinCream:0
+  chocolateCream: 0, 
+  strawberryCream: 0,
+  curdCream:0,
+  proteinCream:0,
+  bananaCream:0,
+  bananaCream:0
+
 });
 const [price, setPrice] = useState(100);
 
