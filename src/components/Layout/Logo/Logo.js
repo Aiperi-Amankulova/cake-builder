@@ -6,6 +6,7 @@ export default () => {
     return (
       <div className= { classes.Logo}> 
     <img src={logo} />
+    <span>Cake Builder</span>
       </div>
     );
   }
