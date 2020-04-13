@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Logo.module.css';
-import logo from "../../../assets/logo.svg";
+import logo1  from "../../../assets/logo1.svg";
 
 export default () => {
     return (
       <div className= { classes.Logo}> 
-    <img src={logo} />
+    <img src={logo1} />
     <span>Cake Builder</span>
       </div>
     );

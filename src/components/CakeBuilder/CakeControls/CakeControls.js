@@ -4,11 +4,11 @@ import CakeControl from './CakeControl/CakeControl';
 
  const CONTROLS = [
         {label: "Chocolate Cream", type: "chocolateCream"}, 
-        {label: "Сtrawberry Сream", type: "strawberryCream"},
+        {label: "Ctrawberry Cream", type: "strawberryCream"},
         {label: "Curd Cream", type: "curdCream"},
         {label: "Protein Cream", type: "proteinCream"},
         {label: "Banana  Cream", type: "bananaCream"},
-        {label: "Vanilla Cream", type: "vanillaCream"},
+        {label: "Vanilla Cream", type: "vanillaCream"}
     ]
 export default ( {addIngredient,removeIngredient, ingredients} ) => {
    
