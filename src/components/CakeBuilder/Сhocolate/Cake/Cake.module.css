@@ -1,29 +1,28 @@
-.Cake{ 
-    box-sizing: border-box;
-    
-    background-repeat: no-repeat;
-     background-size: contain;
-     width: 500px;
-     height: 50px;
+.Cake{  
+     display: flex;   
+     justify-content: center;
+     background-repeat: no-repeat; 
+     width: 100px;
+     height: 10px;
 }
 
 .chocolateCream{ 
-    background-image: url(../../../../assets/cake.svg); 
+    background-image: url(../../../../assets/cake_v1.svg); 
 }
 .strawberryCream{ 
-   background-image: url(../../../../assets/cake.svg); 
+   background-image: url(../../../../assets/cake_v2.svg); 
 }
 .curdCream{ 
-   background-image: url(../../../../assets/cake.svg); 
+   background-image: url(../../../../assets/cake_v3.svg); 
 }
 .proteinCream{
-    background-image: url(../../../../assets/cake.svg); 
+    background-image: url(../../../../assets/cake_v4.svg); 
 }
 .bananaCream{
-    background-image: url(../../../../assets/cake.svg); 
+    background-image: url(../../../../assets/cake_v5.svg); 
 }
-.bananaCream{
-    background-image: url(../../../../assets/cake.svg); 
+.vanillaCream{
+    background-image: url(../../../../assets/cake_v6.svg); 
 }
 .plate{
     /* тарелка */
