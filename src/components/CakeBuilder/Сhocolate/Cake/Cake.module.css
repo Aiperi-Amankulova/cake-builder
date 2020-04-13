@@ -1,9 +1,10 @@
-.Cake{  
-     display: flex;   
-     justify-content: center;
+.Cake{   
+     display: flex; 
+     align-items: center;
      background-repeat: no-repeat; 
-     width: 100px;
-     height: 10px;
+     margin-left: 100px;
+     width: 400px;
+     height: 50px;
 }
 
 .chocolateCream{ 
@@ -24,10 +25,4 @@
 .vanillaCream{ 
     background-image: url(../../../../assets/cake_v2.svg); 
 }
-.plate{
-    /* тарелка */
-    background-color: black; 
-    width: 200px;
-    height: 25px;
-    border-radius: 30px;
-}
+ 
