@@ -19,7 +19,7 @@ const [ingredients, setIngredients] = useState({
   curdCream:0,
   proteinCream:0,
   bananaCream:0,
-  bananaCream:0
+  vanillaCream:0
 
 });
 const [price, setPrice] = useState(100);

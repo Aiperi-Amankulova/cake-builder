@@ -4,7 +4,7 @@ import CakeControl from './CakeControl/CakeControl';
 
  const CONTROLS = [
         {label: "Chocolate Cream", type: "chocolateCream"}, 
-        {label: "Ctrawberry Cream", type: "strawberryCream"},
+        {label: "Strawberry Cream", type: "strawberryCream"},
         {label: "Curd Cream", type: "curdCream"},
         {label: "Protein Cream", type: "proteinCream"},
         {label: "Banana  Cream", type: "bananaCream"},

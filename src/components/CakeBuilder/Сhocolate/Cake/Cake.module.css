@@ -13,7 +13,7 @@
    background-image: url(../../../../assets/cake_v4.svg); 
 }
 .curdCream{ 
-   background-image: url(../../../../assets/cake_v2.svg); 
+   background-image: url(../../../../assets/cake_v5.svg); 
 }
 .proteinCream{
     background-image: url(../../../../assets/cake_v1.svg); 
@@ -21,8 +21,8 @@
 .bananaCream{
     background-image: url(../../../../assets/cake_v6.svg); 
 }
-.vanillaCream{
-    background-image: url(../../../../assets/cake_v5.svg); 
+.vanillaCream{ 
+    background-image: url(../../../../assets/cake_v2.svg); 
 }
 .plate{
     /* тарелка */
