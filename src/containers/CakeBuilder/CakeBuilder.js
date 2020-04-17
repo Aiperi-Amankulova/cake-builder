@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Chocolate from  '../../components/CakeBuilder/Сhocolate/Сhocolate';
 import classes from './CakeBuilder.module.css';
 import CakeControls from '../../components/CakeBuilder/CakeControls/CakeControls';
+import Modal from '../../components/UI/Modal/Modal';
+import OrderSummary from '../../components/CakeBuilder/OrderSummary/OrderSummary';
 
 const PRICES ={
   chocolateCream: 40, 
@@ -24,6 +26,7 @@ const [ingredients, setIngredients] = useState({
 });
 const [price, setPrice] = useState(100);
 const [canOrder, setCanOrder] = useState(false);
+const [isOrder, setIsOrder] = useState(false);
 
 function checkCanOrder(ingredients) {
    const total = Object.keys(ingredients).reduce((total, ingredient) => {
@@ -60,6 +63,10 @@ return (
        ingredients={ingredients}
        addIngredient={addIngredient}
        removeIngredient={removeIngredient}/>
+        <Modal>
+          <OrderSummary
+          ingredients={ingredients}/>
+        </Modal>
       </div>
     );
   }
