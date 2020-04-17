@@ -27,35 +27,32 @@ const [canOrder, setCanOrder] = useState(false);
 
 function checkCanOrder(ingredients) {
    const total = Object.keys(ingredients).reduce((total, ingredient) => {
-     return total + ingredients
-   }, 0)
+     return total + ingredients[ingredient]
+   }, 0);
    setCanOrder(total > 0)
 }
-
 function addIngredient(type){
  const newIngredients = {...ingredients};
  newIngredients[type]++;
  setIngredients(newIngredients);
- checkCanOrder();
+ checkCanOrder(newIngredients);
 
  const newPrice = price + PRICES[type];
  setPrice(newPrice);
 }
-
 function removeIngredient(type){
 if(ingredients[type] >= 1){
   const newIngredients = {...ingredients};
   newIngredients[type]--;
   setIngredients(newIngredients);
-  checkCanOrder();
+  checkCanOrder(newIngredients);
 
  const newPrice = price - PRICES[type];
  setPrice(newPrice);
  }
 }
-
-
-    return (
+ 
+return (
       <div className= { classes.CakeBuilder }> 
       <Chocolate price={price} ingredients={ingredients}/>
        <CakeControls
