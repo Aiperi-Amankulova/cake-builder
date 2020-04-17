@@ -1,14 +1,22 @@
 .Modal{
-   width: 90%;
-   margin: 1rem;
+   width: 90%; 
    padding: 1rem;
    position: fixed;
    z-index: 500;
    top: 100px;
    background-color: white;
    border: black 1px solid;
+
+   transition: all .5s ease-out;
+   opacity: 0;
+   transform: translateY(-100vh);
+   font-family:  sans-serif; 
 }
-@media (min-width: 600px){
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (min-width: 500px){
     .Modal{
         width: 500px;
     }
