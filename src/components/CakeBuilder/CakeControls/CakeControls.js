@@ -10,7 +10,7 @@ import CakeControl from './CakeControl/CakeControl';
         {label: "Banana  Cream", type: "bananaCream"},
         {label: "Vanilla Cream", type: "vanillaCream"}
     ]
-export default ( {addIngredient,removeIngredient, ingredients} ) => {
+export default ( {addIngredient,removeIngredient, ingredients, canOrder} ) => {
    
  
     const controlsOutput = CONTROLS.map((control) => ( 
@@ -26,6 +26,9 @@ export default ( {addIngredient,removeIngredient, ingredients} ) => {
     return (
       <div className= { classes.CakeControls }> 
         {controlsOutput}
+        <button 
+        disabled={!canOrder}
+        className={classes.orderButton}>Order</button>
       </div>
     );
   }
