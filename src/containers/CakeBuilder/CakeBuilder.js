@@ -37,6 +37,9 @@ function checkCanOrder(ingredients) {
 function startOrder(){
    setIsOrdering(true)
 }
+function cancelOrder(){
+  setIsOrdering(false)
+}
 function addIngredient(type){
  const newIngredients = {...ingredients};
  newIngredients[type]++;
@@ -67,7 +70,7 @@ return (
        ingredients={ingredients}
        addIngredient={addIngredient}
        removeIngredient={removeIngredient}/>
-        <Modal show={isOrdering}>
+        <Modal show={isOrdering} hideCallback={cancelOrder}>
           <OrderSummary
           ingredients={ingredients}/>
         </Modal>
