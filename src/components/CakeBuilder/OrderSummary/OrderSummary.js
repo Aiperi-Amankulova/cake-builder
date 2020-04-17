@@ -21,9 +21,11 @@ export default({ ingredients }) =>  {
     <div className={classes.OrderSummary}>
         <h2>Your Order</h2>
         <p>Congratulations! You've built a best cake of all times!</p>
+
         <ul>
              {ingredientsOutput }
         </ul>
+        <p>Would you like to checkout?</p>
     </div>
      )
 }

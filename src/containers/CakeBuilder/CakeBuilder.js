@@ -26,13 +26,16 @@ const [ingredients, setIngredients] = useState({
 });
 const [price, setPrice] = useState(100);
 const [canOrder, setCanOrder] = useState(false);
-const [isOrder, setIsOrder] = useState(false);
+const [isOrdering, setIsOrdering] = useState(false);
 
 function checkCanOrder(ingredients) {
    const total = Object.keys(ingredients).reduce((total, ingredient) => {
      return total + ingredients[ingredient]
    }, 0);
    setCanOrder(total > 0)
+}
+function startOrder(){
+   setIsOrdering(true)
 }
 function addIngredient(type){
  const newIngredients = {...ingredients};
@@ -59,15 +62,16 @@ return (
       <div className= { classes.CakeBuilder }> 
       <Chocolate price={price} ingredients={ingredients}/>
        <CakeControls
+       startOrder={startOrder}
        canOrder={canOrder}
        ingredients={ingredients}
        addIngredient={addIngredient}
        removeIngredient={removeIngredient}/>
-        <Modal>
+        <Modal show={isOrdering}>
           <OrderSummary
           ingredients={ingredients}/>
         </Modal>
       </div>
     );
   }
- 
+  
