@@ -1,7 +1,7 @@
 .Drawer{
 width: 250px; 
 height: 100%; 
-background-color: rgb(90, 90, 175);
+background-color: rgb(191, 223, 236);
 position: fixed;
 z-index: 200;
 top: 0;
