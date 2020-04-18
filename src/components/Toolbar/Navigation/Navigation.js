@@ -6,9 +6,9 @@ export default () => {
     return (
       <div className= { classes.Navigation}>  
         
-         <ul> 
-         <NavigationItem>Cake Builder </NavigationItem>  
-            <NavigationItem>Checkout </NavigationItem>  
+        <ul> 
+            <NavigationItem url='/'>Cake Builder </NavigationItem>  
+            <NavigationItem url="/checkout">Checkout </NavigationItem>  
         </ul>
          
       </div>
