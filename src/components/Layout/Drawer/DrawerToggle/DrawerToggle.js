@@ -1,9 +1,11 @@
 import React from 'react'; 
 import classes from './DrawerToggle.module.css';
 
-export default () => { 
+export default ({ toggleDrawer }) => { 
     return (
-      <div className={classes.DrawerToggle}>
+      <div
+       className={classes.DrawerToggle}
+       onClick={toggleDrawer}>
         menu 
       </div>
     );
