@@ -1,0 +1,18 @@
+.NavigationItem a{
+    display: block;
+    padding: 1rem; 
+    line-height: 1.6; 
+
+    font-family: 'Julius Sans One', sans-serif;
+    text-decoration: none; 
+    font-size: 1rem;
+    border-bottom: 3px solid transparent;
+}
+.NavigationItem a:hover{
+    border-bottom-color: white;
+    background-color: rgba(255,255,255, .3);
+}
+.NavigationItem  .active{
+    border-bottom-color: white;
+    background-color: rgba(255,255,255, .1);
+}

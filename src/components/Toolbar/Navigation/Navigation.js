@@ -5,13 +5,12 @@ import NavigationItem from './NavigationItem/NavigationItem';
 export default () => {
     return (
       <div className= { classes.Navigation}>  
-       <NavigationItem>
-         <ul> 
-           <li url="/">Cake Builder</li>
-           <li url="/checkout">Checkout</li>
-        </ul>
         
-       </NavigationItem>
+         <ul> 
+         <NavigationItem>Cake Builder </NavigationItem>  
+            <NavigationItem>Checkout </NavigationItem>  
+        </ul>
+         
       </div>
     );
   }
