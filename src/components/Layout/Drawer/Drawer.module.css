@@ -1,4 +1,4 @@
-.Drawer{
+.Drawer  .content{
 width: 250px; 
 height: 100%; 
 background-color: rgb(191, 223, 236);
@@ -9,7 +9,7 @@ left: 0;
 box-sizing: 0 0 .5px rgba(0, 0 , 0, .5);
 }
 @media(min-width:500px){
-    .Drawer{
+    .Drawer {
         display: none;
     }
-    }
+}
