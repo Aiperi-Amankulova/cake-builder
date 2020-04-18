@@ -1,6 +1,7 @@
 import React  from 'react'; 
 import classes from './CakeControls.module.css';
 import CakeControl from './CakeControl/CakeControl';
+import Button from '../../UI/Button/Button';
 
  const CONTROLS = [
         {label: "Chocolate Cream", type: "chocolateCream"}, 
@@ -26,10 +27,7 @@ export default ( {addIngredient,removeIngredient, ingredients, canOrder, startOr
     return (
       <div className= { classes.CakeControls }> 
         {controlsOutput}
-        <button 
-        onClick={startOrder}
-        disabled={!canOrder}
-        className={classes.orderButton}>Order</button>
+        <Button click={startOrder}  enabled={canOrder}>Order</Button>
       </div>
     );
   }

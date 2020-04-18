@@ -21,4 +21,16 @@
 .Button:not(:disabled):hover{
     opacity: .8;
 }
- 
+.green{
+  font-family: 'Julius Sans One', sans-serif; 
+  background-color: rgb(25, 124, 25);
+  color: white;
+  border: none;
+}
+.red{
+  font-family: 'Julius Sans One', sans-serif; 
+  background-color: rgb(219, 70, 70);
+  color: white;
+  border: none;
+  margin-left: 10px;
+}
