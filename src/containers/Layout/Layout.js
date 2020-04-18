@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Toolbar from '../Toolbar/Toolbar'; 
+import Toolbar from '../../components/Layout/Toolbar/Toolbar'; 
 import classes from './Layout.module.css'; 
-import Drawer from '../Layout/Drawer/Drawer';
+import Drawer from '../../components/Layout/Drawer/Drawer';
 
 export default ({children}) => {
   const [drawerOpen, setDrawerOpen]=useState(false);
