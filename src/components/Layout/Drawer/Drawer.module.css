@@ -8,6 +8,13 @@ top: 0;
 left: 0;
 box-sizing: 0 0 .5px rgba(0, 0 , 0, .5);
 }
+
+.Open{
+    transform: translateX(0);
+}
+.Closed{
+    transform: translateX(-260px);
+}
 @media(min-width:500px){
     .Drawer {
         display: none;
