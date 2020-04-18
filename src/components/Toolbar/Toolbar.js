@@ -1,13 +1,16 @@
 import React from 'react';
 import classes from './Toolbar.module.css';
-import Logo from '../Layout/Logo/Logo';
-import Nav from './Nav/Nav';
+import Logo from '../Layout/Logo/Logo'; 
+import Navigation from './Navigation/Navigation';
 
 export default () => {
     return (
       <div className= { classes.Toolbar }> 
        <Logo/>
-       <Nav/>
+         <nav > 
+           <Navigation/>
+         </nav>
+      
       </div>
     );
   }

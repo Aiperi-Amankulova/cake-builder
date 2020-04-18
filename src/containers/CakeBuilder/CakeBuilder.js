@@ -75,6 +75,7 @@ return (
        removeIngredient={removeIngredient}/>
         <Modal show={isOrdering} hideCallback={cancelOrder}>
           <OrderSummary
+          price={price}
           finishOrder={finishOrder}
           cancelOrder={cancelOrder}
           ingredients={ingredients}/>

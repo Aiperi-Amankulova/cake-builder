@@ -1,7 +1,10 @@
 .Chocolate .bento{
     border: 3px solid gray;
     background-color: rgb(236, 191, 214);
-    width: 400px;
+    margin: 0 auto;
+
+    max-width: 90%; 
+    min-width: 400px;
     height: 450px; 
     padding-top: 20px;
 
@@ -18,4 +21,9 @@
     margin-top: 5px;
     display: flex; 
     justify-content: center;
+}
+@media(min-width: 511px){
+    .Chocolate{
+        max-width: 400px; 
+    }
 }
