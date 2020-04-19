@@ -16,9 +16,4 @@ transition: transform .3s ease-out;
 }
 .Closed{
     transform: translateX(-260px);
-}
-@media(min-width:500px){
-    .Drawer {
-        display: none;
-    }
-}
+} 

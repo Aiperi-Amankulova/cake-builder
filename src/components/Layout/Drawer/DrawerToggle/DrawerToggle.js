@@ -5,8 +5,11 @@ export default ({ toggleDrawer }) => {
     return (
       <div
        className={classes.DrawerToggle}
-       onClick={toggleDrawer}>
-        menu 
+       onClick={toggleDrawer}> 
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
       </div>
     );
   }
