@@ -19,7 +19,7 @@
     font-size: .5rem; 
     margin-top: 6px;
     color: rgb(200, 200, 209);
-    font-family: 'Julius Sans One', sans-serif; 
+    font-family: 'Quicksand', sans-serif;
     cursor: pointer;
 }
 .orderButton:disabled {
