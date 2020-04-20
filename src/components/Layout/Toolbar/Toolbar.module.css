@@ -8,6 +8,9 @@
     display: none;
 }
 @media(min-width: 500px){
+    .Toolbar{
+        min-width: 200px;
+    }
     .Toolbar nav{
         display: block;
     }
