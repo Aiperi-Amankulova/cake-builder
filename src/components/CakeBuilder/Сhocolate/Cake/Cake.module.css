@@ -6,26 +6,26 @@
 }
 
 .chocolateCream{ 
-    background-image: url(../../../../assets/cake_v3.svg); 
+    background-image: url(../../../../assets/cake_3.svg); 
 }
 .strawberryCream{ 
-   background-image: url(../../../../assets/cake_v4.svg); 
+   background-image: url(../../../../assets/cake_5.svg); 
 }
 .curdCream{ 
-   background-image: url(../../../../assets/cake_v5.svg); 
+   background-image: url(../../../../assets/cake_4.svg); 
 }
 .proteinCream{
-    background-image: url(../../../../assets/cake_v1.svg); 
+    background-image: url(../../../../assets/cake_1.svg); 
 }
 .bananaCream{
-    background-image: url(../../../../assets/cake_v6.svg); 
+    background-image: url(../../../../assets/cake_6.svg); 
 }
 .vanillaCream{ 
-    background-image: url(../../../../assets/cake_v2.svg); 
+    background-image: url(../../../../assets/cake_2.svg); 
 }
 .plate{ 
     background-color: rgb(5, 5, 37);
     border-radius: 50px;
-    width: 200px;
+    width: 300px;
     height: 20px;
 }
