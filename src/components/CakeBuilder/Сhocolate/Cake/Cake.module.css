@@ -1,31 +1,43 @@
-.Cake{   
-     background-position: center;
-     background-repeat: no-repeat; 
-     width: 400px;
-     height: 40px;
+.Cake {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 30px;
 }
 
-.chocolateCream{ 
-    background-image: url(../../../../assets/cake_3.svg); 
+.chocolateCream {
+  background-image: url(../../../../assets/cake_3.svg);
 }
-.strawberryCream{ 
-   background-image: url(../../../../assets/cake_5.svg); 
+.strawberryCream {
+  background-image: url(../../../../assets/cake_5.svg);
 }
-.curdCream{ 
-   background-image: url(../../../../assets/cake_2.svg); 
+.curdCream {
+  background-image: url(../../../../assets/cake_2.svg);
 }
-.proteinCream{
-    background-image: url(../../../../assets/cake_1.svg); 
+.proteinCream {
+  background-image: url(../../../../assets/cake_1.svg);
 }
-.bananaCream{
-    background-image: url(../../../../assets/cake_6.svg); 
+.bananaCream {
+  background-image: url(../../../../assets/cake_6.svg);
 }
-.vanillaCream{ 
-    background-image: url(../../../../assets/cake_4.svg); 
+.vanillaCream {
+  background-image: url(../../../../assets/cake_4.svg);
 }
-.plate{ 
-    background-color: rgb(5, 5, 37);
-    border-radius: 50px;
+.plate {
+  background-color: rgb(5, 5, 37);
+  border-radius: 50px;
+  width: 220px;
+  height: 20px;
+}
+@media (min-width: 500px) {
+  .Cake {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 40px;
+  }
+  .plate {
     width: 280px;
     height: 20px;
+  }
 }
