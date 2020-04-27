@@ -1,17 +1,17 @@
-.Toolbar{
-    background-color: #eea4dc;
- 
-    display: flex;
-    justify-content: space-between;    
+.Toolbar {
+  background-color: #f6d2d9;
+
+  display: flex;
+  justify-content: space-between;
 }
-.Toolbar nav{
-    display: none;
+.Toolbar nav {
+  display: none;
 }
-@media(min-width: 500px){
-    .Toolbar{
-        min-width: 200px;
-    }
-    .Toolbar nav{
-        display: block;
-    }
+@media (min-width: 500px) {
+  .Toolbar {
+    min-width: 200px;
+  }
+  .Toolbar nav {
+    display: block;
+  }
 }

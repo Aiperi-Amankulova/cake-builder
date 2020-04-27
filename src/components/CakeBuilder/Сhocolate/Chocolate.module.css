@@ -1,33 +1,32 @@
-.Chocolate .bento{
-    border: 3px solid gray;
-    background-color: rgb(236, 191, 214);
-    margin: 0 auto;
-    margin-bottom: 20px; 
-    max-width: 300px;
-    min-width: 280px;
-    height: 430px; 
-    padding-top: 20px;
+.Chocolate .bento {
+  background-color: #f7dfbd;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 300px;
+  min-width: 280px;
+  height: 430px;
+  padding-top: 20px;
 
-    display: flex; 
-    flex-flow: column wrap;  
-    justify-content: center;
-    align-items: center;
- 
-    overflow: hidden;
+  border-radius: 30px;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
 }
-.Chocolate .price{
-    font-size: 2rem;
-    font-family: 'Quicksand', sans-serif; 
-    margin-top: 5px;
-    display: flex; 
-    justify-content: center;
-} 
-@media(min-width:500px){
-    .Chocolate .bento{ 
-        margin: 0 auto;
-        margin-bottom: 20px;
-        max-width: 90%; 
-        min-width: 400px;
-        height: 430px;  
-    }
+.Chocolate .price {
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 500px) {
+  .Chocolate .bento {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    min-width: 400px;
+  }
 }

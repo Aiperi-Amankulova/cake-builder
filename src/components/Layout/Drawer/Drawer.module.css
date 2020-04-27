@@ -1,19 +1,19 @@
-.Drawer  .content{
-width: 250px; 
-height: 100%; 
-background-color: rgb(191, 223, 236);
-position: fixed;
-z-index: 200;
-top: 0;
-left: 0;
-box-sizing: 0 0 .5px rgba(0, 0 , 0, .5);
+.Drawer .content {
+  width: 250px;
+  height: 100%;
+  background-color: #f6d2d9;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  box-sizing: 0 0 0.5px rgba(0, 0, 0, 0.5);
 
-transition: transform .3s ease-out;
+  transition: transform 0.3s ease-out;
 }
 
-.Open{
-    transform: translateX(0);
+.Open {
+  transform: translateX(0);
 }
-.Closed{
-    transform: translateX(-260px);
-} 
+.Closed {
+  transform: translateX(-260px);
+}
