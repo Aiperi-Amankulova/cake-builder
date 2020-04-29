@@ -1,4 +1,4 @@
-.Cake {
+.Layer {
   background-position: center;
   background-repeat: no-repeat;
   width: 200px;
@@ -30,7 +30,7 @@
   height: 20px;
 }
 @media (min-width: 500px) {
-  .Cake {
+  .Layer {
     background-position: center;
     background-repeat: no-repeat;
     width: 400px;
