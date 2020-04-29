@@ -1,4 +1,4 @@
-.Chocolate .bento {
+.Cake .bento {
   background-color: #f7dfbd;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -16,7 +16,7 @@
 
   overflow: hidden;
 }
-.Chocolate .price {
+.Cake .price {
   font-size: 2rem;
   font-family: "Quicksand", sans-serif;
   margin-top: 5px;
@@ -24,7 +24,7 @@
   justify-content: center;
 }
 @media (min-width: 500px) {
-  .Chocolate .bento {
+  .Cake .bento {
     margin: 0 auto;
     margin-bottom: 20px;
     min-width: 400px;

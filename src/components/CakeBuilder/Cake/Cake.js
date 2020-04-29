@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Chocolate.module.css";
+import classes from "./Cake.module.css";
 import Layer from "./Layer/Layer";
 
 export default ({ ingredients, price }) => {
@@ -13,7 +13,7 @@ export default ({ ingredients, price }) => {
   });
 
   return (
-    <div className={classes.Chocolate}>
+    <div className={classes.Cake}>
       <div className={classes.bento}>
         {ingredientsOutput}
         <Layer type="plate" />
