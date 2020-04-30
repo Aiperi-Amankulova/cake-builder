@@ -4,7 +4,7 @@ import CakeControls from "../../components/CakeBuilder/CakeControls/CakeControls
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/CakeBuilder/OrderSummary/OrderSummary";
 import Cake from "../../components/CakeBuilder/Cake/Cake";
-import axios from "axios";
+import axios from "../../axios";
 
 const PRICES = {
   chocolateCream: 40,
@@ -27,6 +27,7 @@ export default () => {
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function checkCanOrder(ingredients) {
     const total = Object.keys(ingredients).reduce((total, ingredient) => {
@@ -55,7 +56,11 @@ export default () => {
       },
     };
 
-    axios.post("/order.json", order).then((response) => console.log(response));
+    setLoading(true);
+    axios.post("/order.json", order).then((response) => {
+      setLoading(false);
+      setIsOrdering(false);
+    });
   }
   function addIngredient(type) {
     const newIngredients = { ...ingredients };
@@ -78,6 +83,17 @@ export default () => {
     }
   }
 
+  let orderSummary = "Loading...";
+  if (!loading) {
+    orderSummary = (
+      <OrderSummary
+        price={price}
+        finishOrder={finishOrder}
+        cancelOrder={cancelOrder}
+        ingredients={ingredients}
+      />
+    );
+  }
   return (
     <div className={classes.CakeBuilder}>
       <Cake price={price} ingredients={ingredients} />
@@ -89,12 +105,7 @@ export default () => {
         removeIngredient={removeIngredient}
       />
       <Modal show={isOrdering} hideCallback={cancelOrder}>
-        <OrderSummary
-          price={price}
-          finishOrder={finishOrder}
-          cancelOrder={cancelOrder}
-          ingredients={ingredients}
-        />
+        {orderSummary}
       </Modal>
     </div>
   );
