@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./CakeBuilder.module.css";
 import CakeControls from "../../components/CakeBuilder/CakeControls/CakeControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -9,7 +9,7 @@ import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 const PRICES = {
-  chocolateCream: 40,
+  chocolateCream: 70,
   strawberryCream: 45,
   curdCream: 45,
   proteinCream: 50,
@@ -18,14 +18,7 @@ const PRICES = {
 };
 
 export default withErrorHandler(() => {
-  const [ingredients, setIngredients] = useState({
-    chocolateCream: 0,
-    strawberryCream: 0,
-    curdCream: 0,
-    proteinCream: 0,
-    bananaCream: 0,
-    vanillaCream: 0,
-  });
+  const [ingredients, setIngredients] = useState(null);
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
@@ -85,6 +78,28 @@ export default withErrorHandler(() => {
     }
   }
 
+  useEffect(() => {
+    axios
+      .get("/ingredients.json")
+      .then((response) => setIngredients(response.data));
+  }, []);
+
+  let output = <Spinner />;
+  if (ingredients) {
+    output = (
+      <>
+        <Cake price={price} ingredients={ingredients} />
+        <CakeControls
+          startOrder={startOrder}
+          canOrder={canOrder}
+          ingredients={ingredients}
+          addIngredient={addIngredient}
+          removeIngredient={removeIngredient}
+        />
+      </>
+    );
+  }
+
   let orderSummary = <Spinner />;
   if (isOrdering && !loading) {
     orderSummary = (
@@ -98,14 +113,7 @@ export default withErrorHandler(() => {
   }
   return (
     <div className={classes.CakeBuilder}>
-      <Cake price={price} ingredients={ingredients} />
-      <CakeControls
-        startOrder={startOrder}
-        canOrder={canOrder}
-        ingredients={ingredients}
-        addIngredient={addIngredient}
-        removeIngredient={removeIngredient}
-      />
+      {output}
       <Modal show={isOrdering} hideCallback={cancelOrder}>
         {orderSummary}
       </Modal>
