@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Modal from "../../components/UI/Modal/Modal";
+import { renderIntoDocument } from "react-dom/test-utils";
 
 const withErrorHandler = (WrappedComponent, axios) => {
   return (props) => {
@@ -10,16 +11,24 @@ const withErrorHandler = (WrappedComponent, axios) => {
     }
 
     useEffect(() => {
-      axios.interceptors.response.use(
+      const requestInterceptors = axios.interceptors.request.use((response) => {
+        setError(false);
+        return response;
+      });
+      const responseInterceptors = axios.interceptors.response.use(
         (response) => response,
         (error) => setError(error)
       );
+      return () => {
+        axios.interceptors.request.detach(requestInterceptors);
+        axios.interceptors.response.detach(responseInterceptors);
+      };
     }, []);
 
     return (
       <>
         <Modal show={error} hideCallback={hideCallback}>
-          Ajax didn't work!
+          {error ? error.massage : "Unknown error"}
         </Modal>
         <WrappedComponent {...props} />;
       </>

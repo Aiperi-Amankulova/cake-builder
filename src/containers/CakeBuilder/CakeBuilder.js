@@ -59,7 +59,7 @@ export default withErrorHandler(() => {
     };
 
     setLoading(true);
-    axios.post("/order", order).then((response) => {
+    axios.post("/order.json", order).then((response) => {
       setLoading(false);
       setIsOrdering(false);
     });
