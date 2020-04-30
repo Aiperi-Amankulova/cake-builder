@@ -4,6 +4,7 @@ import CakeControls from "../../components/CakeBuilder/CakeControls/CakeControls
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/CakeBuilder/OrderSummary/OrderSummary";
 import Cake from "../../components/CakeBuilder/Cake/Cake";
+import axios from "axios";
 
 const PRICES = {
   chocolateCream: 40,
@@ -40,7 +41,21 @@ export default () => {
     setIsOrdering(false);
   }
   function finishOrder() {
-    alert("You are on the checkout page!");
+    const order = {
+      ingredient: ingredients,
+      price: price,
+      delivery: "Fast",
+      customer: {
+        name: "Aiperi",
+        phone: "0708700280",
+        address: {
+          street: "doolosbay",
+          city: "Karakol",
+        },
+      },
+    };
+
+    axios.post("/order.json", order).then((response) => console.log(response));
   }
   function addIngredient(type) {
     const newIngredients = { ...ingredients };
