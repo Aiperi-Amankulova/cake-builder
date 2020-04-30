@@ -86,7 +86,7 @@ export default withErrorHandler(() => {
   }
 
   let orderSummary = <Spinner />;
-  if (!loading) {
+  if (isOrdering && !loading) {
     orderSummary = (
       <OrderSummary
         price={price}
