@@ -5,6 +5,8 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/CakeBuilder/OrderSummary/OrderSummary";
 import Cake from "../../components/CakeBuilder/Cake/Cake";
 import axios from "../../axios";
+import Spinner from "../../components/UI/Spinner/Spinner";
+import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 const PRICES = {
   chocolateCream: 40,
@@ -15,7 +17,7 @@ const PRICES = {
   vanillaCream: 55,
 };
 
-export default () => {
+export default withErrorHandler(() => {
   const [ingredients, setIngredients] = useState({
     chocolateCream: 0,
     strawberryCream: 0,
@@ -57,7 +59,7 @@ export default () => {
     };
 
     setLoading(true);
-    axios.post("/order.json", order).then((response) => {
+    axios.post("/order", order).then((response) => {
       setLoading(false);
       setIsOrdering(false);
     });
@@ -83,7 +85,7 @@ export default () => {
     }
   }
 
-  let orderSummary = "Loading...";
+  let orderSummary = <Spinner />;
   if (!loading) {
     orderSummary = (
       <OrderSummary
@@ -109,4 +111,4 @@ export default () => {
       </Modal>
     </div>
   );
-};
+}, axios);
