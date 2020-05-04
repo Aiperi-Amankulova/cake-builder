@@ -26,6 +26,8 @@
 .plate {
   background-image: url(../../../../assets/idontknowwhatidraw1.svg);
   background-size: 100%;
+  width: 180px;
+  height: 75px;
 }
 @media (min-width: 500px) {
   .Layer {

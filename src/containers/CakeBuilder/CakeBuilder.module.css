@@ -1,5 +1,5 @@
-.CakeBuilder{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.CakeBuilder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
