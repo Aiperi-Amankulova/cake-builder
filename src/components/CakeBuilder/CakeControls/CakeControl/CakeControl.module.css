@@ -11,8 +11,9 @@
   border: 1px solid #e97fb9;
   background-color: #e97fb9;
   border-radius: 30%;
-  margin: 7px;
+  margin: 10px;
   color: black;
+  font-size: 17px;
   font-family: "Julius Sans One", sans-serif;
 }
 .CakeControl button:disabled {

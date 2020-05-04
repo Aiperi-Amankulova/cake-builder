@@ -1,4 +1,4 @@
-.Cake .bento {
+.Cake .plate {
   background-color: #f7dfbd;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -22,7 +22,7 @@
   justify-content: center;
 }
 @media (min-width: 500px) {
-  .Cake .bento {
+  .Cake .plate {
     margin: 0 auto;
     margin-bottom: 20px;
     min-width: 400px;
