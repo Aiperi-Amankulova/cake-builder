@@ -28,7 +28,7 @@ const withErrorHandler = (WrappedComponent, axios) => {
     return (
       <>
         <Modal show={error} hideCallback={hideCallback}>
-          {error ? error.massage : "Unknown error"}
+          {error ? error.message : "Unknown error"}
         </Modal>
         <WrappedComponent {...props} />;
       </>
