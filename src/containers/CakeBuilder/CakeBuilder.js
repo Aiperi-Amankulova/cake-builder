@@ -11,7 +11,7 @@ import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 const PRICES = {
   chocolateCream: 70,
   strawberryCream: 45,
-  blueberryСream: 45,
+  blueberryСream: 47,
   proteinCream: 50,
   bananaCream: 50,
   vanillaCream: 55,
@@ -81,7 +81,8 @@ export default withErrorHandler(() => {
   useEffect(() => {
     axios
       .get("/ingredients.json")
-      .then((response) => setIngredients(response.data));
+      .then((response) => setIngredients(response.data))
+      .catch((error) => {});
   }, []);
 
   let output = <Spinner />;

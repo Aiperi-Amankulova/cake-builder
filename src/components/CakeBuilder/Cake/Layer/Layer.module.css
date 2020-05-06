@@ -4,11 +4,11 @@
   width: 200px;
   height: 30px;
 }
-/* .cake {
+.cake {
   background-image: url(../../../../assets/bu-cream.svg);
   background-size: 100%;
   width: 150px;
-} */
+}
 .chocolateCream {
   background-image: url(../../../../assets/сh-cream.svg);
   background-size: 100%;
@@ -20,7 +20,7 @@
   width: 150px;
 }
 .blueberryСream {
-  background-image: url(../../../../assets/blu-cream.svg);
+  background-image: url(../../../../assets/blub-cream.svg);
   background-size: 100%;
   width: 150px;
 }
@@ -35,12 +35,12 @@
   width: 150px;
 }
 .vanillaCream {
-  background-image: url(../../../../assets/v-cream.svg);
+  background-image: url(../../../../assets/v-cream1.svg);
   background-size: 100%;
   width: 150px;
 }
 .plate {
-  background-image: url(../../../../assets/Untitled\(1\).svg);
+  background-image: url(../../../../assets/plate.svg);
   background-size: 100%;
   width: 180px;
   height: 75px;
@@ -51,6 +51,10 @@
     background-repeat: no-repeat;
     width: 210px;
     height: 40px;
+  }
+  .cake {
+    width: 210px;
+    height: 110px;
   }
   .plate {
     width: 250px;
