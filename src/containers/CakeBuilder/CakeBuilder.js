@@ -11,7 +11,7 @@ import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 const PRICES = {
   chocolateCream: 70,
   strawberryCream: 45,
-  curdCream: 45,
+  blueberryСream: 45,
   proteinCream: 50,
   bananaCream: 50,
   vanillaCream: 55,

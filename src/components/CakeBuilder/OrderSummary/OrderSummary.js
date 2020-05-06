@@ -5,7 +5,7 @@ import Button from "../../UI/Button/Button";
 const LABELS = {
   chocolateCream: "Chocolate Cream",
   strawberryCream: "Strawberry Cream",
-  curdCream: "Curd Cream",
+  blueberryСream: "Blueberry Cream",
   proteinCream: "Protein Cream",
   bananaCream: "Banana  Cream",
   vanillaCream: "Vanilla Cream",

@@ -6,7 +6,7 @@ import Button from "../../UI/Button/Button";
 const CONTROLS = [
   { label: "Chocolate Cream", type: "chocolateCream" },
   { label: "Strawberry Cream", type: "strawberryCream" },
-  { label: "Curd Cream", type: "curdCream" },
+  { label: "Blueberry Cream", type: "blueberryСream" },
   { label: "Protein Cream", type: "proteinCream" },
   { label: "Banana  Cream", type: "bananaCream" },
   { label: "Vanilla Cream", type: "vanillaCream" },

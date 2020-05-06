@@ -4,27 +4,43 @@
   width: 200px;
   height: 30px;
 }
-
+/* .cake {
+  background-image: url(../../../../assets/bu-cream.svg);
+  background-size: 100%;
+  width: 150px;
+} */
 .chocolateCream {
-  background-image: url(../../../../assets/cake_3.svg);
+  background-image: url(../../../../assets/сh-cream.svg);
+  background-size: 100%;
+  width: 150px;
 }
 .strawberryCream {
-  background-image: url(../../../../assets/cake_5.svg);
+  background-image: url(../../../../assets/s-cream.svg);
+  background-size: 100%;
+  width: 150px;
 }
-.curdCream {
-  background-image: url(../../../../assets/cake_2.svg);
+.blueberryСream {
+  background-image: url(../../../../assets/blu-cream.svg);
+  background-size: 100%;
+  width: 150px;
 }
 .proteinCream {
-  background-image: url(../../../../assets/cake_1.svg);
+  background-image: url(../../../../assets/p-cream.svg);
+  background-size: 100%;
+  width: 150px;
 }
 .bananaCream {
-  background-image: url(../../../../assets/cake_6.svg);
+  background-image: url(../../../../assets/b-cream.svg);
+  background-size: 100%;
+  width: 150px;
 }
 .vanillaCream {
-  background-image: url(../../../../assets/cake_4.svg);
+  background-image: url(../../../../assets/v-cream.svg);
+  background-size: 100%;
+  width: 150px;
 }
 .plate {
-  background-image: url(../../../../assets/idontknowwhatidraw1.svg);
+  background-image: url(../../../../assets/Untitled\(1\).svg);
   background-size: 100%;
   width: 180px;
   height: 75px;
@@ -33,7 +49,7 @@
   .Layer {
     background-position: center;
     background-repeat: no-repeat;
-    width: 400px;
+    width: 210px;
     height: 40px;
   }
   .plate {
