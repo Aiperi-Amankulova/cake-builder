@@ -19,7 +19,7 @@ const PRICES = {
 
 export default withErrorHandler(() => {
   const [ingredients, setIngredients] = useState(null);
-  const [price, setPrice] = useState(100);
+  const [price, setPrice] = useState(400);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const [loading, setLoading] = useState(false);

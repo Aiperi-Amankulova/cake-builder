@@ -2,12 +2,13 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 200px;
-  height: 30px;
+  height: 28px;
 }
 .cake {
   background-image: url(../../../../assets/bu-cream.svg);
   background-size: 100%;
   width: 150px;
+  height: 78px;
 }
 .chocolateCream {
   background-image: url(../../../../assets/сh-cream.svg);
