@@ -45,7 +45,7 @@ export default withErrorHandler(() => {
         name: "Aiperi",
         phone: "0708700280",
         address: {
-          street: "doolosbay",
+          street: "doolosbai",
           city: "Karakol",
         },
       },
