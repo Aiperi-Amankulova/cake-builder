@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import classes from "./CakeBuilder.module.css";
+import axios from "../../axios";
 import CakeControls from "../../components/CakeBuilder/CakeControls/CakeControls";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/CakeBuilder/OrderSummary/OrderSummary";
 import Cake from "../../components/CakeBuilder/Cake/Cake";
-import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import classes from "./CakeBuilder.module.css";
 
 const PRICES = {
   chocolateCream: 70,
