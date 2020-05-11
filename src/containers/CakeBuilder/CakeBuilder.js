@@ -51,12 +51,6 @@ export default withErrorHandler(() => {
       pathname: "/checkout",
       search: queryParams.join("&"),
     });
-
-    setLoading(true);
-    axios.post("/order.json", order).then((response) => {
-      setLoading(false);
-      setIsOrdering(false);
-    });
   }
   function addIngredient(type) {
     const newIngredients = { ...ingredients };
