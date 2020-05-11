@@ -1,15 +1,15 @@
-.Navigation ul {
+.Nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   margin: 10px 0;
   padding: 0;
 }
-.Navigation li {
+.Nav li {
   list-style-type: none;
 }
 @media (min-width: 500px) {
-  .Navigation ul {
+  .Nav ul {
     flex-direction: row;
     margin: 0 12px;
   }

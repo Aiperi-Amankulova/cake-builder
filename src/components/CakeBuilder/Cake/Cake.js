@@ -1,6 +1,6 @@
 import React from "react";
-import classes from "./Cake.module.css";
 import Layer from "./Layer/Layer";
+import classes from "./Cake.module.css";
 
 export default ({ ingredients, price }) => {
   let ingredientsOutput = [];
