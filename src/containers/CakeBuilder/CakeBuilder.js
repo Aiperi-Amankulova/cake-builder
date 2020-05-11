@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "../../axios";
 import CakeControls from "../../components/CakeBuilder/CakeControls/CakeControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -23,6 +24,7 @@ export default withErrorHandler(() => {
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   function checkCanOrder(ingredients) {
     const total = Object.keys(ingredients).reduce((total, ingredient) => {
@@ -37,19 +39,18 @@ export default withErrorHandler(() => {
     setIsOrdering(false);
   }
   function finishOrder() {
-    const order = {
-      ingredient: ingredients,
-      price: price,
-      delivery: "Fast",
-      customer: {
-        name: "Aiperi",
-        phone: "0708700280",
-        address: {
-          street: "doolosbai",
-          city: "Karakol",
-        },
-      },
-    };
+    const queryParams = Object.keys(ingredients).map(
+      (ingredient) =>
+        encodeURIComponent(ingredient) +
+        "=" +
+        encodeURIComponent(ingredients[ingredient])
+    );
+    queryParams.push("price=" + encodeURIComponent(price.toFixed(2)));
+
+    history.push({
+      pathname: "/checkout",
+      search: queryParams.join("&"),
+    });
 
     setLoading(true);
     axios.post("/order.json", order).then((response) => {
