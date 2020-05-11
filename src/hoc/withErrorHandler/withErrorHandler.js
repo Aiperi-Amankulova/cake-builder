@@ -1,39 +1,39 @@
 import React, { useState, useEffect } from "react";
 import Modal from "../../components/UI/Modal/Modal";
-import { renderIntoDocument } from "react-dom/test-utils";
 
 const withErrorHandler = (WrappedComponent, axios) => {
   return (props) => {
     const [error, setError] = useState(null);
 
-    function hideCallback() {
+    function hideModal() {
       setError(false);
     }
 
+    const requestInterceptor = axios.interceptors.request.use((request) => {
+      setError(false);
+      return request;
+    });
+    const responseInterceptor = axios.interceptors.response.use(
+      (response) => response,
+      (error) => {
+        setError(error);
+        return Promise.reject(error);
+      }
+    );
+
     useEffect(() => {
-      const requestInterceptors = axios.interceptors.request.use((response) => {
-        setError(false);
-        return response;
-      });
-      const responseInterceptors = axios.interceptors.response.use(
-        (response) => response,
-        (error) => {
-          setError(error);
-          return Promise.reject(error);
-        }
-      );
       return () => {
-        axios.interceptors.request.detach(requestInterceptors);
-        axios.interceptors.response.detach(responseInterceptors);
+        axios.interceptors.request.eject(requestInterceptor);
+        axios.interceptors.response.eject(responseInterceptor);
       };
-    }, []);
+    }, [requestInterceptor, responseInterceptor]);
 
     return (
       <>
-        <Modal show={error} hideCallback={hideCallback}>
+        <Modal show={error} hideCallback={hideModal}>
           {error ? error.message : "Unknown error"}
         </Modal>
-        <WrappedComponent {...props} />;
+        <WrappedComponent {...props} />
       </>
     );
   };
