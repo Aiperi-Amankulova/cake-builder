@@ -1,9 +1,10 @@
 import React from "react";
+import Button from "../../../components/UI/Button/Button";
 import classes from "./CheckoutForm.module.css";
 
-export default () => {
+export default ({ checkoutForm }) => {
   return (
-    <form className={classes.CheckoutForm}>
+    <form onSubmit={checkoutForm} className={classes.CheckoutForm}>
       <input type="text" placeholder="Name" required />
       <input type="phone" placeholder="Phone" required />
       <input type="text" placeholder="Address" required />
@@ -14,7 +15,7 @@ export default () => {
       <label>
         <input type="radio" name="delivery" value="regular" required /> Regular
       </label>
-      <button>Send</button>
+      <Button green>Finish</Button>
     </form>
   );
 };

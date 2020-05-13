@@ -2,3 +2,6 @@
   display: flex;
   flex-flow: column nowrap;
 }
+.Button {
+  margin-left: 10px;
+}
