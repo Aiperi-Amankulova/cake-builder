@@ -31,11 +31,7 @@ export default () => {
     history.push("/checkout/form");
   }
 
-  function checkoutForm(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-  }
+  function checkoutFinish(data) {}
 
   return (
     <div className={classes.Checkout}>
@@ -46,7 +42,7 @@ export default () => {
         checkoutContinue={checkoutContinue}
       />
       <Route path="/checkout/form">
-        <CheckoutForm checkoutForm={checkoutForm} />
+        <CheckoutForm checkoutFinish={checkoutFinish} />
       </Route>
     </div>
   );
