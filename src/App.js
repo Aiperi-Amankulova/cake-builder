@@ -4,6 +4,7 @@ import CakeBuilder from "./containers/CakeBuilder/CakeBuilder";
 import Checkout from "./containers/Checkout/Checkout";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
+import Orders from "./containers/Orders/Orders";
 
 export default () => {
   return (
@@ -18,6 +19,9 @@ export default () => {
           </Route>
           <Route path="/checkout">
             <Checkout />
+          </Route>
+          <Route path="/orders">
+            <Orders />
           </Route>
         </Switch>
       </Layout>
