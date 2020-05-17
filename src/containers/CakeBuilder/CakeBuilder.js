@@ -23,7 +23,6 @@ export default withErrorHandler(() => {
   const [price, setPrice] = useState(400);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
-  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   function checkCanOrder(ingredients) {
@@ -97,7 +96,7 @@ export default withErrorHandler(() => {
   }
 
   let orderSummary = <Spinner />;
-  if (isOrdering && !loading) {
+  if (isOrdering) {
     orderSummary = (
       <OrderSummary
         price={price}
