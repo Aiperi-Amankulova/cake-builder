@@ -19,7 +19,7 @@ export default ({ ingredients, price }) => {
         {ingredientsOutput}
         <Layer type="plate" />
       </div>
-      <div className={classes.price}>Total price: {price}</div>
+      <div className={classes.price}>Total price: {price} som</div>
     </div>
   );
 };
