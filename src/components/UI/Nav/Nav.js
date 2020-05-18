@@ -7,7 +7,7 @@ export default () => {
     <div className={classes.Nav}>
       <ul>
         <NavItem url="/builder">Cake Builder</NavItem>
-        <NavItem url="/checkout">Checkout </NavItem>
+        <NavItem url="/orders">Orders </NavItem>
       </ul>
     </div>
   );

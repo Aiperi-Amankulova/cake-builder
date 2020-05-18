@@ -23,7 +23,6 @@ export default withErrorHandler(() => {
       <Order key={id} {...orders[id]} />
     ));
   }
-
   return (
     <div className={classes.Orders}>
       <h1>Orders</h1>

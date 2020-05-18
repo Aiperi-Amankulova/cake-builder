@@ -9,6 +9,7 @@ const CONTROLS = {
   bananaCream: "Banana  Cream",
   vanillaCream: "Vanilla Cream",
 };
+
 export default ({ price, ingredients, details }) => {
   const ingredientsOutput = Object.keys(ingredients).map((key) => (
     <span key={key} className={classes.ingredient}>

@@ -108,6 +108,7 @@ export default withErrorHandler(() => {
   }
   return (
     <div className={classes.CakeBuilder}>
+      <h1>Cake Builder</h1>
       {output}
       <Modal show={isOrdering} hideCallback={cancelOrder}>
         {orderSummary}
