@@ -15,6 +15,7 @@
   color: black;
   font-size: 17px;
   font-family: "Julius Sans One", sans-serif;
+  margin-bottom: 10px;
 }
 .CakeControl button:disabled {
   opacity: 0.5;
