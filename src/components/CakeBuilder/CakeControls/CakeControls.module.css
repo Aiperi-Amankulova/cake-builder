@@ -13,6 +13,8 @@
   justify-content: center;
 }
 .orderButton {
+  border: 1px solid #e97fb9;
+  background-color: #e97fb9;
   border-radius: 20px;
   padding: 10px 15px;
   font-size: 0.5rem;
