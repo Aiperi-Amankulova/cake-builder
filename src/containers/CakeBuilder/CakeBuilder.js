@@ -10,18 +10,8 @@ import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import classes from "./CakeBuilder.module.css";
 import { useSelector } from "react-redux";
 
-const PRICES = {
-  chocolateCream: 70,
-  strawberryCream: 45,
-  blueberryСream: 47,
-  proteinCream: 50,
-  bananaCream: 50,
-  vanillaCream: 55,
-};
-
 export default withErrorHandler(() => {
-  const { ingredients } = useSelector((state) => state);
-  const [price, setPrice] = useState(400);
+  const { ingredients, price } = useSelector((state) => state);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
@@ -58,8 +48,8 @@ export default withErrorHandler(() => {
     // setIngredients(newIngredients);
     checkCanOrder(newIngredients);
 
-    const newPrice = price + PRICES[type];
-    setPrice(newPrice);
+    // const newPrice = price + PRICES[type];
+    // setPrice(newPrice);
   }
   function removeIngredient(type) {
     if (ingredients[type] >= 1) {
@@ -68,8 +58,8 @@ export default withErrorHandler(() => {
       // setIngredients(newIngredients);
       checkCanOrder(newIngredients);
 
-      const newPrice = price - PRICES[type];
-      setPrice(newPrice);
+      // const newPrice = price - PRICES[type];
+      // setPrice(newPrice);
     }
   }
 
