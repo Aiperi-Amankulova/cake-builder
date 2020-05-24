@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "../../axios";
 import CakeControls from "../../components/CakeBuilder/CakeControls/CakeControls";
@@ -11,16 +11,18 @@ import classes from "./CakeBuilder.module.css";
 import { useSelector } from "react-redux";
 
 export default withErrorHandler(() => {
-  const { ingredients, price } = useSelector((state) => state);
-  const [canOrder, setCanOrder] = useState(false);
+  const { ingredients, price, canOrder } = useSelector((state) => state);
+
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
 
+  const canOrder = Object.keys(ingredients).reduce((canOrder, ingredient) => {
+    return !canOrder ? number > 0 : canOrder;
+  }, false);
+
   function checkCanOrder(ingredients) {
-    const total = Object.keys(ingredients).reduce((total, ingredient) => {
-      return total + ingredients[ingredient];
-    }, 0);
-    setCanOrder(total > 0);
+    const total = 0;
+    return total > 0;
   }
   function startOrder() {
     setIsOrdering(true);
@@ -42,26 +44,6 @@ export default withErrorHandler(() => {
       search: queryParams.join("&"),
     });
   }
-  function addIngredient(type) {
-    const newIngredients = { ...ingredients };
-    newIngredients[type]++;
-    // setIngredients(newIngredients);
-    checkCanOrder(newIngredients);
-
-    // const newPrice = price + PRICES[type];
-    // setPrice(newPrice);
-  }
-  function removeIngredient(type) {
-    if (ingredients[type] >= 1) {
-      const newIngredients = { ...ingredients };
-      newIngredients[type]--;
-      // setIngredients(newIngredients);
-      checkCanOrder(newIngredients);
-
-      // const newPrice = price - PRICES[type];
-      // setPrice(newPrice);
-    }
-  }
 
   // useEffect(() => {
   //   axios
@@ -79,8 +61,6 @@ export default withErrorHandler(() => {
           startOrder={startOrder}
           canOrder={canOrder}
           ingredients={ingredients}
-          addIngredient={addIngredient}
-          removeIngredient={removeIngredient}
         />
       </>
     );
@@ -91,7 +71,6 @@ export default withErrorHandler(() => {
     orderSummary = (
       <OrderSummary
         price={price}
-        finishOrder={finishOrder}
         cancelOrder={cancelOrder}
         ingredients={ingredients}
       />

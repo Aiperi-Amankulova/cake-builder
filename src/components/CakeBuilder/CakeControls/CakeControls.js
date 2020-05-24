@@ -12,10 +12,10 @@ const CONTROLS = [
   { label: "Vanilla Cream", type: "vanillaCream" },
 ];
 export default ({
+  canOrder,
   addIngredient,
   removeIngredient,
   ingredients,
-  canOrder,
   startOrder,
 }) => {
   const controlsOutput = CONTROLS.map((control) => (
