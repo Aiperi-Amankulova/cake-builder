@@ -11,38 +11,17 @@ import classes from "./CakeBuilder.module.css";
 import { useSelector } from "react-redux";
 
 export default withErrorHandler(() => {
-  const { ingredients, price, canOrder } = useSelector((state) => state);
+  const { ingredients, price } = useSelector((state) => state);
 
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
 
-  const canOrder = Object.keys(ingredients).reduce((canOrder, ingredient) => {
+  const canOrder = Object.values(ingredients).reduce((canOrder, number) => {
     return !canOrder ? number > 0 : canOrder;
   }, false);
 
-  function checkCanOrder(ingredients) {
-    const total = 0;
-    return total > 0;
-  }
-  function startOrder() {
-    setIsOrdering(true);
-  }
-  function cancelOrder() {
-    setIsOrdering(false);
-  }
   function finishOrder() {
-    const queryParams = Object.keys(ingredients).map(
-      (ingredient) =>
-        encodeURIComponent(ingredient) +
-        "=" +
-        encodeURIComponent(ingredients[ingredient])
-    );
-    queryParams.push("price=" + encodeURIComponent(price.toFixed(2)));
-
-    history.push({
-      pathname: "/checkout",
-      search: queryParams.join("&"),
-    });
+    history.push("/checkout");
   }
 
   // useEffect(() => {
@@ -58,7 +37,7 @@ export default withErrorHandler(() => {
       <>
         <Cake price={price} ingredients={ingredients} />
         <CakeControls
-          startOrder={startOrder}
+          startOrder={() => setIsOrdering(true)}
           canOrder={canOrder}
           ingredients={ingredients}
         />
@@ -70,17 +49,19 @@ export default withErrorHandler(() => {
   if (isOrdering) {
     orderSummary = (
       <OrderSummary
-        price={price}
-        cancelOrder={cancelOrder}
         ingredients={ingredients}
+        finishOrder={() => history.push("/checkout")}
+        cancelOrder={() => setIsOrdering(false)}
+        price={price}
       />
     );
   }
+
   return (
     <div className={classes.CakeBuilder}>
       <h1>Cake Builder</h1>
       {output}
-      <Modal show={isOrdering} hideCallback={cancelOrder}>
+      <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
         {orderSummary}
       </Modal>
     </div>
