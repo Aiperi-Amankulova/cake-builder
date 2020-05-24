@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .Cake .plate {
     margin: 0 auto;
     margin-bottom: 20px;
