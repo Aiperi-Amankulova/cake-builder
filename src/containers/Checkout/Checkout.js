@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useHistory, useLocation, Route } from "react-router-dom";
+import { useHistory, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 import axios from "../../axios";
 import CheckoutSummary from "../../components/Checkout/CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import Spinner from "../../components/UI/Spinner/Spinner";
-import { useSelector } from "react-redux";
 
 export default withErrorHandler(() => {
   const history = useHistory();
