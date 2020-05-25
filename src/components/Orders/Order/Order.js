@@ -11,11 +11,14 @@ const CONTROLS = {
 };
 
 export default ({ price, ingredients, details }) => {
-  const ingredientsOutput = Object.keys(ingredients).map((key) => (
-    <span key={key} className={classes.ingredient}>
-      {CONTROLS[key]} ({ingredients[key]})
-    </span>
-  ));
+  let ingredientsOutput = null;
+  if (ingredients) {
+    ingredientsOutput = Object.keys(ingredients).map((key) => (
+      <span key={key} className={classes.ingredient}>
+        {CONTROLS[key]} ({ingredients[key]})
+      </span>
+    ));
+  }
 
   const detailsOutput = (
     <div className={classes.details}>
