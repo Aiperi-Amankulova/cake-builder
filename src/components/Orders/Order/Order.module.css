@@ -12,10 +12,10 @@
   margin-bottom: 0.3em;
 }
 .Order .price {
+  font-family: "Quicksand", sans-serif;
   font-weight: bold;
   font-size: 2rem;
   color: #e97fb9;
-  font-family: "Nanum Brush Script", cursive;
   margin-bottom: 0.5em;
 }
 .Order .ingredient {
