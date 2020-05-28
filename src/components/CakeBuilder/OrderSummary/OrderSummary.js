@@ -3,6 +3,7 @@ import classes from "./OrderSummary.module.css";
 import Button from "../../UI/Button/Button";
 
 const LABELS = {
+  candle: "Candle",
   chocolateCream: "Chocolate Cream",
   strawberryCream: "Strawberry Cream",
   blueberryСream: "Blueberry Cream",

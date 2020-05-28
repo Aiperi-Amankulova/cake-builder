@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./Order.module.css";
 
 const CONTROLS = {
+  candle: "Candle",
   chocolateCream: "Chocolate Cream",
   strawberryCream: "Strawberry Cream",
   blueberryСream: "Blueberry Cream",

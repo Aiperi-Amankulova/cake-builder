@@ -15,7 +15,6 @@ export default ({ ingredients, price }) => {
   return (
     <div className={classes.Cake}>
       <div className={classes.plate}>
-        <Layer type="cake" />
         {ingredientsOutput}
         <Layer type="plate" />
       </div>

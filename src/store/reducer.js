@@ -2,6 +2,7 @@ import * as actions from "./actions";
 
 const initialState = {
   ingredients: {
+    candle: 1,
     chocolateCream: 1,
     strawberryCream: 1,
     blueberryСream: 2,
@@ -12,6 +13,7 @@ const initialState = {
   price: 400,
 };
 const PRICES = {
+  candle: 20,
   chocolateCream: 70,
   strawberryCream: 45,
   blueberryСream: 47,

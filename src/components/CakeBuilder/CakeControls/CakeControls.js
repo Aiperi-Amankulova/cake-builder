@@ -4,6 +4,7 @@ import CakeControl from "./CakeControl/CakeControl";
 import Button from "../../UI/Button/Button";
 
 const CONTROLS = [
+  { label: "Candle", type: "candle" },
   { label: "Chocolate Cream", type: "chocolateCream" },
   { label: "Strawberry Cream", type: "strawberryCream" },
   { label: "Blueberry Cream", type: "blueberryСream" },

@@ -4,11 +4,11 @@
   width: 200px;
   height: 28px;
 }
-.cake {
+.candle {
   background-image: url(../../../../assets/candle.svg);
   background-size: 100%;
-  width: 90px;
-  height: 40px;
+  width: 110px;
+  height: 50px;
 }
 .chocolateCream {
   background-image: url(../../../../assets/сh-cream.svg);
@@ -46,14 +46,14 @@
   width: 180px;
   height: 75px;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .Layer {
     background-position: center;
     background-repeat: no-repeat;
     width: 210px;
     height: 40px;
   }
-  .cake {
+  .candle {
     width: 150px;
     height: 70px;
   }
