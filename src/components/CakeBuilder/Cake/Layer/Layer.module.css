@@ -5,10 +5,10 @@
   height: 28px;
 }
 .cake {
-  background-image: url(../../../../assets/bu-cream.svg);
+  background-image: url(../../../../assets/candle.svg);
   background-size: 100%;
-  width: 150px;
-  height: 78px;
+  width: 90px;
+  height: 40px;
 }
 .chocolateCream {
   background-image: url(../../../../assets/сh-cream.svg);
@@ -54,8 +54,8 @@
     height: 40px;
   }
   .cake {
-    width: 210px;
-    height: 110px;
+    width: 150px;
+    height: 70px;
   }
   .plate {
     width: 250px;
