@@ -17,3 +17,9 @@
 .Closed {
   transform: translateX(-260px);
 }
+
+@media (min-width: 600px) {
+  .Drawer {
+    display: none;
+  }
+}

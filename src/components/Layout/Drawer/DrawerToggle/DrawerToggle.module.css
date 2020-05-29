@@ -17,9 +17,6 @@
 }
 @media (min-width: 600px) {
   .DrawerToggle {
-    display: block;
-  }
-  .DrawerToggle {
     display: none;
   }
 }

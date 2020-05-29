@@ -11,7 +11,7 @@
 .Nav li {
   list-style-type: none;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .Nav ul {
     flex-direction: row;
     margin: 0 12px;
