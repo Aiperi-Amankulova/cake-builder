@@ -26,11 +26,29 @@
   background-color: rgb(25, 124, 25);
   color: white;
   border: none;
+
+  width: 120px;
+  height: 40px;
+  font-size: 1rem;
+  margin-right: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 10px;
+  margin-left: 20px;
 }
 .red {
   font-family: "Julius Sans One", sans-serif;
   background-color: rgb(219, 70, 70);
   color: white;
   border: none;
-  margin-left: 15px;
+  width: 120px;
+  height: 40px;
+  font-size: 1rem;
+  margin-right: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 10px;
+  margin-left: 50px;
 }
