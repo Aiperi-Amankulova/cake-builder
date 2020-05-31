@@ -33,7 +33,11 @@ export default (state = initialState, action) => {
       };
 
     case types.SET_INGREDIENTS:
-      return action.ingredients;
+      return {
+        ...state,
+        ingredients: action.ingredients,
+        price: initialState.price,
+      };
     default:
       return state;
   }

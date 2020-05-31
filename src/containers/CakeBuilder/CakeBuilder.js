@@ -38,20 +38,21 @@ export default withErrorHandler(() => {
           canOrder={canOrder}
           ingredients={ingredients}
         />
+        <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
+          <OrderSummary
+            ingredients={ingredients}
+            finishOrder={() => history.push("/checkout")}
+            cancelOrder={() => setIsOrdering(false)}
+            price={price}
+          />
+        </Modal>
       </>
     );
   }
-  <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
-    <OrderSummary
-      ingredients={ingredients}
-      finishOrder={() => history.push("/checkout")}
-      cancelOrder={() => setIsOrdering(false)}
-      price={price}
-    />
-  </Modal>;
+
   return (
     <div className={classes.CakeBuilder}>
-      <h1>Cake Builder</h1>
+      <h1>Cake builder</h1>
       {output}
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import Layer from "./Layer/Layer";
 import classes from "./Cake.module.css";
 
-export default ({ ingredients, price }) => {
+export default ({ price, ingredients }) => {
   let ingredientsOutput = [];
 
   Object.keys(ingredients).forEach((ingredient) => {
