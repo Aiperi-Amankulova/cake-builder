@@ -6,12 +6,12 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/CakeBuilder/OrderSummary/OrderSummary";
 import Cake from "../../components/CakeBuilder/Cake/Cake";
 import Spinner from "../../components/UI/Spinner/Spinner";
-import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import withAxios from "../../hoc/withAxios/withAxios";
 import classes from "./CakeBuilder.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { load } from "../../store/actions/builder";
 
-export default withErrorHandler(() => {
+export default withAxios(({ loading }) => {
   const { ingredients, price } = useSelector((state) => state.builder);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
