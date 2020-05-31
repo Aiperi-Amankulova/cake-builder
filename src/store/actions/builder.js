@@ -22,4 +22,5 @@ export const set = (dispatch, ingredients) =>
 export const load = (dispatch) =>
   axios
     .get("/ingredients.json")
-    .then(({ data }) => set(dispatch, data).catch(() => {}));
+    .then(({ data }) => set(dispatch, data))
+    .catch(() => {});

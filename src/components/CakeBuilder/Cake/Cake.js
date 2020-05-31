@@ -5,11 +5,15 @@ import classes from "./Cake.module.css";
 export default ({ price, ingredients }) => {
   let ingredientsOutput = [];
 
-  Object.keys(ingredients).forEach((ingredient) => {
-    for (let i = 0; i < ingredients[ingredient].quantity; i++) {
-      ingredientsOutput.push(<Layer key={ingredient + i} type={ingredient} />);
-    }
-  });
+  if (ingredients) {
+    Object.keys(ingredients).forEach((ingredient) => {
+      for (let i = 0; i < ingredients[ingredient].quantity; i++) {
+        ingredientsOutput.push(
+          <Layer key={ingredient + i} type={ingredient} />
+        );
+      }
+    });
+  }
 
   return (
     <div className={classes.Cake}>
