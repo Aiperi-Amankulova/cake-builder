@@ -22,7 +22,7 @@ export default ({ price, ingredients, details }) => {
   return (
     <div className={classes.Order}>
       {detailsOutput}
-      <div className={classes.price}>{price.toFixed(2)} som</div>
+      <div className={classes.price}>{price} som</div>
       <div className={classes.ingredients}>{ingredientsOutput}</div>
     </div>
   );
