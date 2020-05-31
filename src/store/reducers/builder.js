@@ -2,25 +2,17 @@ import * as types from "../actions/types";
 
 const initialState = {
   ingredients: {
-    candle: 1,
-    chocolateCream: 1,
-    strawberryCream: 1,
-    blueberryСream: 2,
-    proteinCream: 1,
-    bananaCream: 1,
-    vanillaCream: 1,
+    candle: { quantity: 1, price: 20, label: "Candle" },
+    chocolateCream: { quantity: 1, price: 70, label: "Chocolate Cream" },
+    strawberryCream: { quantity: 1, price: 45, label: "Strawberry Cream" },
+    blueberryСream: { quantity: 1, price: 47, label: "Blueberry Cream" },
+    proteinCream: { quantity: 1, price: 50, label: "Protein Cream" },
+    bananaCream: { quantity: 1, price: 50, label: "Banana Cream" },
+    vanillaCream: { quantity: 1, price: 55, label: "Vanilla Cream" },
   },
   price: 400,
 };
-const PRICES = {
-  candle: 20,
-  chocolateCream: 70,
-  strawberryCream: 45,
-  blueberryСream: 47,
-  proteinCream: 50,
-  bananaCream: 50,
-  vanillaCream: 55,
-};
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case types.ADD_INGREDIENT:
@@ -28,19 +20,24 @@ export default (state = initialState, action) => {
         ...state,
         ingredients: {
           ...state.ingredients,
-          [action.ingredient]: state.ingredients[action.ingredient] + 1,
+          [action.ingredient]: {
+            ...state.ingredients[action.ingredient],
+            quantity: state.ingredients[action.ingredient].quantity + 1,
+          },
         },
-        price: state.price + PRICES[action.ingredient],
+        price: state.price + state.ingredients[action.ingredient].price,
       };
-
     case types.REMOVE_INGREDIENT:
       return {
         ...state,
         ingredients: {
           ...state.ingredients,
-          [action.ingredient]: state.ingredients[action.ingredient] - 1,
+          [action.ingredient]: {
+            ...state.ingredients[action.ingredient],
+            quantity: state.ingredients[action.ingredient].quantity - 1,
+          },
         },
-        price: state.price - PRICES[action.ingredient],
+        price: state.price - state.ingredients[action.ingredient].price,
       };
 
     default:

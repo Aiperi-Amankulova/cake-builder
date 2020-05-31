@@ -16,13 +16,12 @@ export default withErrorHandler(() => {
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
 
-  const canOrder = Object.values(ingredients).reduce((canOrder, number) => {
-    return !canOrder ? number > 0 : canOrder;
-  }, false);
-
-  function finishOrder() {
-    history.push("/checkout");
-  }
+  const canOrder = Object.values(ingredients).reduce(
+    (canOrder, ingredients) => {
+      return !canOrder ? ingredients.quantity > 0 : canOrder;
+    },
+    false
+  );
 
   // useEffect(() => {
   //   axios
