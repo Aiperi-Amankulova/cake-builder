@@ -3,14 +3,16 @@ import classes from "./Order.module.css";
 
 export default ({ price, ingredients, details }) => {
   let ingredientsOutput = null;
-  if (ingredients) {
-    ingredientsOutput = Object.keys(ingredients).map((ingredient) => (
-      <span key={ingredient} className={classes.ingredient}>
-        {ingredients[ingredient].ladel} ({ingredients[ingredient].quantity})
-      </span>
-    ));
-  }
 
+  if (ingredients) {
+    ingredientsOutput = Object.keys(ingredients)
+      .filter((ingredient) => ingredients[ingredient].quantity > 0)
+      .map((ingredient) => (
+        <span key={ingredient} className={classes.ingredient}>
+          {ingredients[ingredient].label} ({ingredients[ingredient].quantity})
+        </span>
+      ));
+  }
   const detailsOutput = (
     <div className={classes.details}>
       {details
@@ -18,7 +20,6 @@ export default ({ price, ingredients, details }) => {
         : "No details available"}
     </div>
   );
-
   return (
     <div className={classes.Order}>
       {detailsOutput}

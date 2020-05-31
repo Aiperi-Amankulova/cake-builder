@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory, Route } from "react-router-dom";
+import { useHistory, Route, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "../../axios";
 import CheckoutSummary from "../../components/Checkout/CheckoutSummary/CheckoutSummary";
@@ -38,6 +38,18 @@ export default withErrorHandler(() => {
   let formOutput = <Spinner />;
   if (!loading) {
     formOutput = <CheckoutForm checkoutFinish={checkoutFinish} />;
+  }
+
+  let summaryOutput = <Redirect to="/" />;
+  if (ingredients) {
+    summaryOutput = (
+      <CheckoutSummary
+        ingredients={ingredients}
+        price={price}
+        checkoutCancel={checkoutCancel}
+        checkoutContinue={checkoutContinue}
+      />
+    );
   }
 
   return (
