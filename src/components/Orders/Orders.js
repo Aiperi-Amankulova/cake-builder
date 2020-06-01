@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default withAxios(() => {
   const dispatch = useDispatch();
-  const orders = useSelector((state) => state.orders);
+  const { orders } = useSelector((state) => state.orders);
 
   useEffect(() => {
     load(dispatch);
@@ -22,7 +22,7 @@ export default withAxios(() => {
     ));
   }
   if (orders === null) {
-    ordersOutput = <h2>No orders found...</h2>;
+    ordersOutput = <h3>No orders found</h3>;
   }
   return (
     <div className={classes.Orders}>
