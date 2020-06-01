@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "./containers/Layout/Layout";
 import CakeBuilder from "./containers/CakeBuilder/CakeBuilder";
-import Checkout from "./containers/Checkout/Checkout";
+import Checkout from "./components/Checkout/Checkout";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Orders from "./containers/Orders/Orders";
+import Orders from "./components/Orders/Orders";
 
 export default () => {
   return (

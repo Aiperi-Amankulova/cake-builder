@@ -11,7 +11,7 @@ import classes from "./CakeBuilder.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { load } from "../../store/actions/builder";
 
-export default withAxios(({ loading }) => {
+export default withAxios(() => {
   const { ingredients, price } = useSelector((state) => state.builder);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();

@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useHistory, Route, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "../../axios";
-import CheckoutSummary from "../../components/Checkout/CheckoutSummary/CheckoutSummary";
+import CheckoutSummary from "./CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import withAxios from "../../hoc/withAxios/withAxios";
-import Spinner from "../../components/UI/Spinner/Spinner";
+import Spinner from "../UI/Spinner/Spinner";
 
 export default withAxios(({ loading }) => {
   const history = useHistory();
