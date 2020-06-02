@@ -4,12 +4,6 @@
   width: 200px;
   height: 28px;
 }
-.candle {
-  background-image: url(../../../../assets/candle.svg);
-  background-size: 100%;
-  width: 110px;
-  height: 50px;
-}
 .chocolateCream {
   background-image: url(../../../../assets/сh-cream.svg);
   background-size: 100%;

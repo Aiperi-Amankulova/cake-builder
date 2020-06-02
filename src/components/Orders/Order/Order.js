@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Order.module.css";
 
 export default ({ price, ingredients, details }) => {
-  let ingredientsOutput = null;
+  let ingredientsOutput = [];
 
   if (ingredients) {
     ingredientsOutput = Object.keys(ingredients)
@@ -23,7 +23,7 @@ export default ({ price, ingredients, details }) => {
   return (
     <div className={classes.Order}>
       {detailsOutput}
-      <div className={classes.price}>{price} som</div>
+      <div className={classes.price}>{price ? price.toFixed(2) : 0} som</div>
       <div className={classes.ingredients}>{ingredientsOutput}</div>
     </div>
   );
