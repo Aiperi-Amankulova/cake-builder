@@ -5,6 +5,7 @@ import Checkout from "./components/Checkout/Checkout";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Orders from "./components/Orders/Orders";
+import Auth from "./components/Auth/Auth";
 
 export default () => {
   return (
@@ -22,6 +23,9 @@ export default () => {
           </Route>
           <Route path="/orders">
             <Orders />
+          </Route>
+          <Route path="/auth">
+            <Auth />
           </Route>
         </Switch>
       </Layout>
