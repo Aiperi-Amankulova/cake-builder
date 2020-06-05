@@ -20,6 +20,9 @@ export const fail = (dispatch, errors) =>
 
 export const auth = (dispatch, email, password) =>
   axios
-    .post()
+    .post(
+      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=AIzaSyD5A0H4LiuIkOVzsXG8gPdYSuXB73SWkJY",
+      { email, password }
+    )
     .then(({ data }) => success(dispatch, data))
     .catch((error) => fail(dispatch, error));
