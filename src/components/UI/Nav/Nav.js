@@ -8,6 +8,7 @@ export default () => {
       <ul>
         <NavItem url="/builder">Cake Builder</NavItem>
         <NavItem url="/orders">Orders </NavItem>
+        <NavItem url="/auth">Authenticate</NavItem>
       </ul>
     </div>
   );
