@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory, Route, Redirect } from "react-router-dom";
-import { useSelector } from "react-redux";
 import axios from "../../axios";
 import CheckoutSummary from "./CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import withAxios from "../../hoc/withAxios/withAxios";
 import Spinner from "../UI/Spinner/Spinner";
+import { useSelector } from "react-redux";
 
 export default withAxios(({ loading }) => {
   const history = useHistory();
   const { ingredients, price } = useSelector((state) => state.builder);
+  const { token, id } = useSelector((state) => state.auth);
 
   function checkoutCancel() {
     history.push("/builder");
@@ -22,13 +23,15 @@ export default withAxios(({ loading }) => {
 
   function checkoutFinish(data) {
     axios
-      .post("/orders.json", {
+      .post("/orders.json?auth=" + token, {
         ingredients,
         price,
         details: data,
+        userId: id,
       })
       .then(() => history.replace("/"));
   }
+
   let formOutput = <Spinner />;
   if (!loading) {
     formOutput = <CheckoutForm checkoutFinish={checkoutFinish} />;
@@ -48,12 +51,7 @@ export default withAxios(({ loading }) => {
 
   return (
     <div className={classes.Checkout}>
-      <CheckoutSummary
-        ingredients={ingredients}
-        price={price}
-        checkoutCancel={checkoutCancel}
-        checkoutContinue={checkoutContinue}
-      />
+      {summaryOutput}
       <Route path="/checkout/form">{formOutput}</Route>
     </div>
   );

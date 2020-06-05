@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../../UI/Button/Button";
 import classes from "./CheckoutForm.module.css";
 
