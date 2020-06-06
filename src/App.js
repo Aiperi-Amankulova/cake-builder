@@ -27,6 +27,9 @@ export default () => {
           <Route path="/auth">
             <Auth />
           </Route>
+          <Route path="/logout">
+            <Layout />
+          </Route>
         </Switch>
       </Layout>
     </div>

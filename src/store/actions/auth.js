@@ -55,6 +55,7 @@ export const timeout = (dispatch, seconds) =>
 const key = "AIzaSyD5A0H4LiuIkOVzsXG8gPdYSuXB73SWkJY";
 const signInUrl =
   "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=" + key;
+
 const signUpUrl =
   "https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=" +
   key;
