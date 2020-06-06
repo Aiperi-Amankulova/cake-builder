@@ -6,9 +6,9 @@ export const set = (dispatch, orders) =>
     type: SET_ORDERS,
     orders,
   });
-export const load = (dispatch) =>
+export const load = (dispatch, token) =>
   axios
-    .get("/orders.json")
+    .get("/orders.json?auth=" + token)
     .then(({ data }) => {
       set(dispatch, data);
     })
