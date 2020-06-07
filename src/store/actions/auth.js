@@ -48,21 +48,6 @@ export const restore = (dispatch) => {
     logout(dispatch);
   }
 };
-export const restore = (dispatch) => {
-  const idToken = localStorage.getItem("idToken");
-  const localId = localStorage.getItem("localId");
-
-  if (idToken && localId) {
-    const expirationDate = new Date(localStorage.getItem("expirationDate"));
-    if (expirationDate > new Date()) {
-      success(dispatch, { idToken, localId });
-      timeout(
-        dispatch,
-        (expirationDate.getTime() - new Date().getTime()) / 1000
-      );
-    }
-  }
-};
 
 export const timeout = (dispatch, seconds) =>
   setTimeout(() => logout(dispatch), seconds * 1000);

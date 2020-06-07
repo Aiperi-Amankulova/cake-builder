@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Layout from "./containers/Layout/Layout";
 import { useDispatch, useSelector } from "react-redux";
-import { restore } from "./store/actions/auth";
 import CakeBuilder from "./containers/CakeBuilder/CakeBuilder";
 import Checkout from "./components/Checkout/Checkout";
 import "./App.css";
@@ -9,7 +8,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Orders from "./components/Orders/Orders";
 import Auth from "./components/Auth/Auth";
 import { restore } from "./store/actions/auth";
-import { useDispatch } from "react-redux";
+import Logout from "./components/Logout/Logout";
 
 export default () => {
   const dispatch = useDispatch();
