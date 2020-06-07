@@ -72,7 +72,7 @@ const signInUrl =
   "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=" + key;
 
 const signUpUrl =
-  "https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=" +
+  "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=" +
   key;
 export const auth = (dispatch, method, email, password) =>
   axios
