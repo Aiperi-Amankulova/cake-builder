@@ -1,5 +1,5 @@
-import { SET_ORDERS } from "./types";
 import axios from "../../axios";
+import { SET_ORDERS } from "./types";
 
 export const set = (dispatch, orders) =>
   dispatch({

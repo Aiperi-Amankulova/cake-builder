@@ -13,10 +13,11 @@ export default ({ price, ingredients, details }) => {
   const detailsOutput = (
     <div className={classes.details}>
       {details
-        ? details.name + "," + details.phone + "," + details.address
-        : "No details available!"}
+        ? details.name + ", " + details.phone + ", " + details.address
+        : "No details available"}
     </div>
   );
+
   return (
     <div className={classes.Order}>
       {detailsOutput}

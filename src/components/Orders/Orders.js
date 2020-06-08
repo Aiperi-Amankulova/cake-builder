@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "../../axios";
-import classes from "./Orders.module.css";
 import Order from "./Order/Order";
+import classes from "./Orders.module.css";
 import withAxios from "../../hoc/withAxios/withAxios";
 import Spinner from "../UI/Spinner/Spinner";
 import { load } from "../../store/actions/orders";
@@ -14,7 +14,7 @@ export default withAxios(() => {
 
   useEffect(() => {
     load(dispatch, token, id);
-  }, [dispatch, token, id]);
+  }, [dispatch, token]);
 
   let ordersOutput = <Spinner />;
   if (orders) {
@@ -25,6 +25,7 @@ export default withAxios(() => {
   if (orders === null) {
     ordersOutput = <h3>No orders found</h3>;
   }
+
   return (
     <div className={classes.Orders}>
       <h1>Orders</h1>
